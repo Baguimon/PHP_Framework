@@ -7,6 +7,30 @@
 
     <div class="row mt-2">
 
+        <hr>
+
+        <h1>Formulaire de création d'un utilisateur</h1>   
+        
+        {{ form_start(form)}}
+        <div class="col-md-6 mb-2">
+            <div class="form-group">
+                {{ form_widget(form.name) }}
+            </div>
+        </div>
+        <div class="col-md-6 mb-2">
+            <div class="form-group">
+                {{ form_widget(form.email) }}
+            </div>
+        </div>
+        <div class="col-md-6 mb-2">
+            <div class="form-group">
+                {{ form_widget(form.date_inscription) }}
+            </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Valider</button>
+
+        {{ form_end(form)}}
 
     </div>
 
