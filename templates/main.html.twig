@@ -1,12 +1,8 @@
-<html>
-    <head>
-        <title>Accueil</title>
-    </head>
-    <body>
+{% extends 'base.html.twig' %}
 
-        <h1>Ma page d'accueil</h1>
 
-        <a href=" {{ path('app_contact') }} ">Nous contacter</a>
+{% block container %}
+        
+    <h1>Ma page d'accueil</h1>
 
-    </body>
-</html>
+{% endblock %}
