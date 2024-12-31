@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+
+{% block container %}
+
+    <h1>Mes utilisateurs ({{ users|length}}) | <a href="{{ path('app_user_new') }}" class"btn btn-sm btn-success">Créer un utilisateur</a></h1>
+
+    <div class="row mt-2">
+
+        {% for user in users %}
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{user.name}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">ID : {{user.id}}</h6>
+                        <p class="card-text mb-2">{{user.email}}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+
+{% endblock %}
